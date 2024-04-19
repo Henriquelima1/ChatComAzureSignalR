@@ -33,4 +33,4 @@ Além disso, o projeto inclui uma interface web simples onde os usuários podem 
 
 3. Navegue até o diretório do projeto e execute o comando `dotnet run` para iniciar o servidor.
 
-4. Abra um navegador da web e acesse `http://localhost:5000` para interagir com o chat.
+4. Abra um navegador da web e acesse `http://localhost:` para interagir com o chat.
