@@ -21,10 +21,10 @@
     <div class="container" style="height: calc(100% - 110px);">
         <div id="messages" style="background-color: whitesmoke;"></div>
         <div style="width: 100%; border-left-style: ridge; border-right-style: ridge;">
-            <textarea id="message" style="width: 100%; padding: 5px 10px; border-style: hidden;" placeholder="Type message and press Enter to send..."></textarea>
+            <textarea id="message" style="width: 100%; padding: 5px 10px; border-style: hidden;" placeholder="Digite uma mensagem e pressione Enter para enviar. Você também pode clicar em 'Echo' para enviar uma mensagem apenas para si mesmo ou usar 'Send to User' para enviar uma mensagem para um usuário específico, fornecendo o ConnectionId dele..."></textarea>
         </div>
         <div style="overflow: auto; border-style: ridge; border-top-style: hidden;">
-            <input type="text" id="userToMessage" placeholder="Enter username">
+            <input type="text" id="userToMessage" placeholder="connection Id do usuario">
             <button class="btn-primary pull-right" id="sendToUser">Send to User</button>
             <button class="btn-warning pull-right" id="echo">Echo</button>
             <button class="btn-success pull-right" id="sendmessage">Send</button>
@@ -41,13 +41,13 @@
         </div>
     </div>
 
-    <!--Reference the SignalR library. -->
+ 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.js"></script>
 
-    <!--Add script to update the page and send messages.-->
+
     <script type="text/javascript">
         document.addEventListener("DOMContentLoaded", function () {
-            // Set initial focus to message input box.
+           
             var messageInput = document.getElementById("message");
             messageInput.focus();
 
@@ -78,7 +78,7 @@
             function bindConnectionMessage(connection) {
                 var messageCallback = function (name, message) {
                     if (!message) return;
-                    // Html encode display name and message.
+                    
                     var encodedName = name;
                     var encodedMsg = message.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
                     appendMessage(encodedName, encodedMsg);
@@ -101,13 +101,13 @@
             function onConnected(connection) {
                 console.log("connection started");
                 document.getElementById("sendmessage").addEventListener("click", function (event) {
-                    // Call the broadcastMessage method on the hub.
+                    
                     if (messageInput.value) {
                         connection.send("broadcastMessage", "Vo", messageInput.value)
                             .catch((e) => appendMessage("_BROADCAST_", e.message));
                     }
 
-                    // Clear text box and reset focus for next comment.
+                   
                     messageInput.value = "";
                     messageInput.focus();
                     event.preventDefault();
@@ -130,10 +130,9 @@
                     }
                 });
                 document.getElementById("echo").addEventListener("click", function (event) {
-                    // Call the echo method on the hub.
+                    
                     connection.send("echo", "Você3", messageInput.value);
 
-                    // Clear text box and reset focus for next comment.
                     messageInput.value = "";
                     messageInput.focus();
                     event.preventDefault();

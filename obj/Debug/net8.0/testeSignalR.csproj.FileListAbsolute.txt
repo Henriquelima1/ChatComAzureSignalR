@@ -40,3 +40,4 @@ C:\Users\hlima\OneDrive - Nelogica\Área de Trabalho\testeSignalR\obj\Debug\net8
 C:\Users\hlima\OneDrive - Nelogica\Área de Trabalho\testeSignalR\obj\Debug\net8.0\testeSignalR.pdb
 C:\Users\hlima\OneDrive - Nelogica\Área de Trabalho\testeSignalR\obj\Debug\net8.0\testeSignalR.genruntimeconfig.cache
 C:\Users\hlima\OneDrive - Nelogica\Área de Trabalho\testeSignalR\obj\Debug\net8.0\ref\testeSignalR.dll
+C:\Users\hlima\OneDrive - Nelogica\Área de Trabalho\testeSignalR\obj\Debug\net8.0\testeSignalR.sourcelink.json
