@@ -1,3 +1,4 @@
+
 # Chat usando ASP.Net Core com Azure SignalR
 
 Este é um projeto de chat desenvolvido utilizando ASP.Net Core e Azure SignalR. O objetivo deste projeto é criar um chat em tempo real onde os usuários podem se comunicar entre si. Além disso, o projeto também implementa a capacidade de enviar mensagens privadas entre usuários.
